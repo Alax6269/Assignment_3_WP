@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog</title>
+    <style>
+        body { 
+            background-color: rgb(0, 0, 0);
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;}
+
+        /* (1) Header-Color/Shape/Format */
+        .Navigation-Button-On-Header {
+            background-color: red;
+            display: flex;
+            align-items: center;
+            width: auto;
+            height: 65px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;}
+            
+        /* (2) Navigation-Button-Box */
+        .Navigation-Button-On-Header ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+            gap: 27px;}
+
+        /* (3) Navigation-Button-Text-Box-Settings */
+        .Navigation-Button-On-Header ul li a {
+            border-radius: 50px;
+            width: 222px;
+            height: 48px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;}
+        /* About-Us-Stuff */
+        .About-Us {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            display: flex;
+            padding: 20px 0;
+            box-sizing: border-box;}
+        /* The-Main-Title */
+        .Section-Title {
+            background-color: red;
+            font-size: 38px;
+            font-weight: bold;
+            color: white;
+            padding: 15px 0;
+            width: 600px;
+            margin-bottom: 60px;
+            border-radius: 20px;
+            text-align: center;}
+        /*Boxe's */
+        .Container-Box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px; 
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 20px;
+            box-sizing: border-box;}
+         /* Card-Stuff */
+        .Card {
+            width: 45%;
+            color: white;
+            min-width: 300px;
+            height: 180px;
+            box-sizing: border-box;
+            padding: 25px;}
+         /* Card-Heading2 */
+        .Card h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 24px;}
+        /* Card-ul-stuff */
+        .Card ul {
+            margin: 0;
+            padding-left: 20px;
+            line-height: 1.5;
+            font-size: 16px;}
+        /* Blue-Card-Stuff */
+        .Blue-Card {
+            background-color: blue;
+            border-top-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0;}
+         /* Red-Card-Stuff */
+        .Red-Card {
+            background-color: red;
+            border-top-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0;}
+         /* Blog-Stuff */
+        .Blog-Preview {
+            width: 100%;
+            background-color: black;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 0;}
+         /* Row-Stuff */
+        .Preview-Row {
+            display: flex;
+            box-sizing: border-box;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            max-width: 1200px;
+            width: 100%;}
+         /* Box-Stuff*/
+        .Preview-Box {
+            flex: 1;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+            min-width: 280px;
+            max-width: 320px;
+            display: flex;}
+        /*Box-Heading3*/
+        .Preview-Box h3 {
+             color: red;
+             line-height: 1.3;
+             margin: 15px 0 5px 0;
+             font-size: 22px;
+             font-weight: bold;}
+        /*Box-Text*/
+        .Preview-Box p {
+             color: white;
+             font-weight: bold;
+             font-size: 16px;
+             margin: 0;}
+         /* Image-Stuff */
+        .Image {
+            border-top-right-radius: 50px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            overflow: hidden;
+            box-sizing: border-box;
+            width: 100%;
+            height: 240px;
+            border: 2px solid white;
+            margin-bottom: 25px;}
+         /* img-stuff */
+        .Image img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;} 
+        
+
+    
+
+        
+        hr {
+            border: 0;
+            background-color: white;
+            height: 3px;
+            margin-bottom: 40px;
+            margin-top: 40px;
+            width: 100%;}
+         
+        .Main-Big-Text {
+            color: white;
+            font-size: 60px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 0px;
+            letter-spacing: 1px;
+            width: 100%;}
+            
+        main {
+            background-color: rgb(0, 0, 0);
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch; }
+
+        .Main-Banner-Img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 0;
+            display: block;
+            margin: 0;}
+
+
+        .Gallery {
+            width: 100%;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 0;
+            box-sizing: border-box;}
+
+        .Gallery-Container {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+            gap: 60px; 
+            padding: 0 20px;
+            box-sizing: border-box;}
+
+        .Gallery-Item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+            width: 100%;}
+
+        
+        .Tab-Label {
+            background-color: white;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 35px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 25px; 
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            letter-spacing: 1px;}
+
+        .Gallery-Frame {
+            width: 100%;
+            height: 400px;
+            border: 2px solid rgb(180, 0, 0); 
+            box-sizing: border-box;
+            overflow: hidden;
+            display: block;}
+
+        .Gallery-Frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;}
+
+        
+        .Site-Footer {
+            background-color: rgb(80, 80, 80); 
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 20px 40px;
+            width: 100%;
+            box-sizing: border-box;}
+
+    </style>       
+</head>
+
+<body>
+
+     <header>
+      <nav class="Navigation-Button-On-Header">
+       <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="#about">ABOUT US</a></li>
+          <li><a href="#preview">BLOG PREVIEW</a></li>
+          <li><a href="#Gallery">GALLERY</a></li>
+          <li><a href="#Contact">CONTACT</a></li>
+       </ul> 
+      </nav>
+     </header>
+
+<main>
+  <div class="Main-Big-Text">
+    <h1>Cosmo Explorer</h1>
+    <img class="Main-Banner-Img" src="https://images-assets.nasa.gov/image/art002e009285/art002e009285~large.jpg?w=1200&h=800&fit=crop&crop=faces%2Cfocalpoint" alt="Picture Of Moon">
+  </div>
+  
+  <hr>
+  <section id="Contact"></section>
+  <section id="about"></section>
+  <section class="About-Us">
+    <div class="Section-Title">About Us</div>
+    <div class="Container-Box">
+        <div class="Card Blue-Card">
+          <h2>What we do?</h2>
+          <ul>
+             <li>Collects and Provides Latest Space Discovery News and Informations Globally.</li>
+          </ul>
+        </div>
+        <div class="Card Red-Card">
+          <h2>Vision</h2>
+          <ul>
+            <li>Allow Everyone to Discover Wonders of Space Easily.</li>
+          </ul>
+        </div>
+        
+        <div class="Card Red-Card">
+          <h2>Contact</h2>
+          <ul>
+            <li>Cosmo@gmail.com</li>
+            <li>Phone 0152740024</li>
+          </ul>
+        </div>
+
+        <div class="Card Blue-Card">
+          <h2>Site History</h2>
+          <ul>
+             <li>Founded by Richard Jack in 1997 from USA</li>
+          </ul>
+        </div>
+    </div>
+  </section>
+  
+  <section id="preview"></section>
+  <section class="Blog-Preview">
+    <div class="Section-Title">Blog Preview</div>
+    <div class="Preview-Row">
+
+        <div class="Preview-Box">
+          <div class="Image">
+            <img src="https://www.sciencedaily.com/images/1920/gas-giant-planet.webp" alt="Planet">
+          </div>
+          <h3>New Planet Discovered:</h3>
+          <p>(L 98-59 d)</p>
+        </div>
+
+        <div class="Preview-Box">
+          <div class="Image">
+            <img src="https://images-assets.nasa.gov/image/PIA23122/PIA23122~medium.jpg" alt="Black Hole">
+          </div>
+          <h3>New Supermassive Black Hole:</h3>
+          <p>(CANUCS-LRD-z8.6)</p>
+        </div>
+
+        <div class="Preview-Box">
+          <div class="Image">
+            <img src="https://c02.purpledshub.com/uploads/sites/41/2021/03/james-webb-54e84f8.jpg?w=940&webp=1" alt="Telescope">
+          </div>
+          <h3>New Space Telescope Technology:</h3>
+          <p>James Webb Telescope (JWST)</p>
+        </div>
+
+    </div>
+  </section>
+
+
+
+  <section id="Gallery"></section>
+  <section class="Gallery">
+    <div class="Section-Title">PICTURES GALLERY</div>
+
+    <div class="Gallery-Container">
+      <div class="Gallery-Item">
+         <div class="Tab-Label">PLANETS</div>
+         <div class="Gallery-Frame">
+          <img src="https://images-assets.nasa.gov/image/art002e016354/art002e016354~large.jpg" alt="Planets Space View">
+        </div>
+      </div>
+       <div class="Gallery-Item">
+        <div class="Tab-Label">BLACK HOLE</div>
+          <div class="Gallery-Frame">
+             <img src="https://images-assets.nasa.gov/image/PIA23122/PIA23122~medium.jpg" alt="Black Hole Vortex View">
+          </div>
+       </div>
+
+     </div>
+  </section>
+</main>
+
+<footer class="Site-Footer">
+  <div class="Footer-Left">@2026 Cosmo Explorer. All Right Reserved</div>
+  <div class="Footer-Right">
+    <span>Phone: 0152740024</span>
+    <span>Cosmo@gmail.com</span>
+  </div>
+</body>
+</footer>
+</html>
